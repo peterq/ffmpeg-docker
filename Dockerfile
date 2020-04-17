@@ -10,4 +10,4 @@ RUN apt install -y libva-drm2
 
 RUN apt install -y libvdpau1
 
-ENTRYPOINT ["sleep", "9000"]
+ENTRYPOINT []
