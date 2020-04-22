@@ -23,4 +23,6 @@ RUN tar -C /usr/local -xzf go1.14.2.linux-amd64.tar.gz
 
 RUN apt install -y git
 
+RUN echo 'export PATH=$PATH:/usr/local/go/bin' >> /etc/profile
+
 ENTRYPOINT []
