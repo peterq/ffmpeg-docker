@@ -31,7 +31,7 @@ RUN apt install -y libavdevice-dev libavfilter-dev libswscale-dev libavcodec-dev
 
 RUN wget https://qy-enfi-deploy.oss-cn-hangzhou.aliyuncs.com/pbox/storage/buld/FFmpeg-n4.2.1.tar.gz
 
-RUN tar -C FFmpeg-n4.2.1 -xzf go1.14.2.linux-amd64.tar.gz
+RUN tar -C FFmpeg-n4.2.1 -xzf FFmpeg-n4.2.1.tar.gz
 
 RUN cd FFmpeg-n4.2.1 && ./configure && make && make install
 
