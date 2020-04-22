@@ -29,4 +29,11 @@ RUN apt install -y pkg-config
 
 RUN apt install -y libavdevice-dev libavfilter-dev libswscale-dev libavcodec-dev libavformat-dev libswresample-dev libavutil-dev
 
+RUN cd ~ && \
+    git clone https://github.com/FFmpeg/FFmpeg ffmpeg && \
+    cd ffmpeg && \
+    ./configure && \
+    make && \
+    make install
+
 ENTRYPOINT []
