@@ -18,6 +18,8 @@ RUN apt install -y libvdpau1
 
 RUN apt install -y ca-certificates
 
+RUN apt-get update --fix-missing
+
 RUN apt install -y ffmpeg
 
 RUN  apt install build-essential
