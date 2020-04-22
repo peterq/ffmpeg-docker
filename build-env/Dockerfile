@@ -16,10 +16,9 @@ RUN apt install -y ffmpeg
 
 RUN  apt install -y build-essential
 
+RUN  apt install -y wget
 RUN  wget https://dl.google.com/go/go1.14.2.linux-amd64.tar.gz
 
 RUN tar -C /usr/local -xzf go1.14.2.linux-amd64.tar.gz
-
-RUN export PATH=$PATH:/usr/local/go/bin
 
 ENTRYPOINT []
