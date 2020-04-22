@@ -25,4 +25,6 @@ RUN apt install -y git
 
 RUN echo 'export PATH=$PATH:/usr/local/go/bin' >> /etc/profile
 
+RUN apt install -y pkg-config
+
 ENTRYPOINT []
