@@ -27,4 +27,6 @@ RUN echo 'export PATH=$PATH:/usr/local/go/bin' >> /etc/profile
 
 RUN apt install -y pkg-config
 
+RUN apt install -y libavdevice-dev libavfilter-dev libswscale-dev libavcodec-dev libavformat-dev libswresample-dev libavutil-dev
+
 ENTRYPOINT []
