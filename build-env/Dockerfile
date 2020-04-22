@@ -29,10 +29,14 @@ RUN apt install -y pkg-config
 
 RUN apt install -y libavdevice-dev libavfilter-dev libswscale-dev libavcodec-dev libavformat-dev libswresample-dev libavutil-dev
 
+RUN apt-get -y install yasm
+
 RUN wget https://qy-enfi-deploy.oss-cn-hangzhou.aliyuncs.com/pbox/storage/buld/FFmpeg-n4.2.1.tar.gz
 
-RUN tar -C FFmpeg-n4.2.1 -xzf FFmpeg-n4.2.1.tar.gz
+RUN mkdir -p /root/FFmpeg-n4.2.1 && tar -C /root/FFmpeg-n4.2.1 -xzf FFmpeg-n4.2.1.tar.gz
 
-RUN cd FFmpeg-n4.2.1 && ./configure && make && make install
+RUN cd /root/FFmpeg-n4.2.1/FFmpeg-n4.2.1 && ./configure && make -j 8 && make install
+
+RUN ffmpeg -v
 
 ENTRYPOINT []
