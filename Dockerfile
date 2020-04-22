@@ -10,6 +10,8 @@ RUN apt install -y libva-drm2
 
 RUN apt install -y libvdpau1
 
+ENV DEBIAN_FRONTEND noninteractive
+
 RUN apt install -y ca-certificates
 
 RUN apt install -y tzdata
