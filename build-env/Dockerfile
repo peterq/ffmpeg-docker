@@ -10,18 +10,10 @@ RUN apt install -y tzdata
 
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' > /etc/timezone
 
-RUN apt install -y libva2
-
-RUN apt install -y libva-drm2
-
-RUN apt install -y libvdpau1
-
 RUN apt install -y ca-certificates
-
-RUN apt-get update --fix-missing
 
 RUN apt install -y ffmpeg
 
-RUN  apt install build-essential
+RUN  apt install -y build-essential
 
 ENTRYPOINT []
