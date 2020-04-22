@@ -37,6 +37,6 @@ RUN mkdir -p /root/FFmpeg-n4.2.1 && tar -C /root/FFmpeg-n4.2.1 -xzf FFmpeg-n4.2.
 
 RUN cd /root/FFmpeg-n4.2.1/FFmpeg-n4.2.1 && ./configure && make -j 8 && make install
 
-RUN ffmpeg -v
+RUN ffmpeg -version
 
 ENTRYPOINT []
